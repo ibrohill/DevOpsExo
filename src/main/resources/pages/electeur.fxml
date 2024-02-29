@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="806.0" style="-fx-background-color: FFFAFA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.dev.parrainageapp.controllers.AdminController">
+   <children>
+      <TableView fx:id="parrainageTb" layoutX="280.0" layoutY="108.0" onMouseClicked="#getData" prefHeight="366.0" prefWidth="451.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="nomCol" prefWidth="139.0" text="NOM" />
+            <TableColumn fx:id="prenomCol" prefWidth="130.0" text="PRENOM" />
+            <TableColumn fx:id="partieCol" prefWidth="106.0" text="PARTIE" />
+         </columns>
+      </TableView>
+      <Button fx:id="statistiquebtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#statistique" style="-fx-background-color: black; -fx-border-radius: 5px;" text="Statistique" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="gestionbtn" layoutX="113.0" layoutY="14.0" mnemonicParsing="false" onAction="#gestionCandidat" style="-fx-background-color: black;" text="Gestion candidat" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

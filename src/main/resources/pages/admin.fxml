@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="510.0" prefWidth="806.0" style="-fx-background-color: kaki;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.dev.parrainageapp.controllers.AdminController">
+   <children>
+      <TextField fx:id="nomtfd" layoutX="45.0" layoutY="155.0" prefHeight="25.0" prefWidth="197.0" promptText="Veuillez saisir le Nom" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="565.0" />
+      <TextField fx:id="prenomTfd" layoutX="45.0" layoutY="224.0" prefHeight="25.0" prefWidth="195.0" promptText="Veuillez saisir le Prenom" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="565.0" />
+      <TextField fx:id="partieTfd" layoutX="45.0" layoutY="294.0" prefHeight="25.0" prefWidth="196.0" promptText="Donner la partie" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="565.0" />
+      <ButtonBar layoutX="192.0" layoutY="440.0" prefHeight="40.0" prefWidth="423.0">
+         <buttons>
+            <Button fx:id="enregistrerBtn" mnemonicParsing="false" onAction="#save" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #0598ff;" text="Enregistrer" textAlignment="CENTER" />
+            <Button fx:id="modifierBtn" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: #0598ff;" text="Modifier" />
+            <Button fx:id="supprimerBtn" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: #0598ff;" text="Supprimer" />
+            <Button fx:id="effacerBtn" layoutX="200.0" layoutY="18.0" mnemonicParsing="false" onAction="#clear" style="-fx-background-color: #0598ff;" text="Effacer">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </buttons>
+      </ButtonBar>
+      <TableView fx:id="parrainageTb" layoutX="282.0" layoutY="42.0" onMouseClicked="#getData" prefHeight="366.0" prefWidth="451.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="nomCol" prefWidth="139.0" text="NOM" />
+            <TableColumn fx:id="prenomCol" prefWidth="130.0" text="PRENOM" />
+            <TableColumn fx:id="partieCol" prefWidth="106.0" text="PARTIE" />
+         </columns>
+      </TableView>
+      <Button fx:id="statistiquebtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#statistique" style="-fx-background-color: #0598ff; -fx-border-radius: 5px;" text="Statistique" />
+      <Button fx:id="gestionbtn" layoutX="113.0" layoutY="14.0" mnemonicParsing="false" onAction="#gestionCandidat" style="-fx-background-color: #0598ff;" text="Gestion candidat" />
+   </children>
+</AnchorPane>

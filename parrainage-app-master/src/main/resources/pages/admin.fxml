@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="578.0" prefWidth="691.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.dev.parrainageapp.controllers.AdminController">
+   <children>
+      <Text fill="#1d2bef" layoutX="181.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des utilisateurs" textAlignment="JUSTIFY" underline="true">
+         <font>
+            <Font name="Bernard MT Condensed" size="36.0" />
+         </font>
+      </Text>
+      <VBox layoutX="11.0" layoutY="92.0" prefHeight="261.0" prefWidth="241.0" spacing="13.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
+            <TextField fx:id="nomtfd" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="prenom" />
+            <TextField fx:id="prnomtfd" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="login" />
+            <TextField fx:id="logintfd" prefHeight="21.0" prefWidth="308.0" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ROLE" />
+            <ComboBox fx:id="rolecbb" prefHeight="27.0" prefWidth="240.0" />
+         </children>
+      </VBox>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <ButtonBar layoutX="35.0" layoutY="424.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button fx:id="enregistrebtn" mnemonicParsing="false" onAction="#enregistrer" text="enregistrer" />
+            <Button fx:id="modifierbtn" layoutX="135.0" layoutY="17.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+            <Button fx:id="suprimerbtn" layoutX="201.0" layoutY="17.0" mnemonicParsing="false" onAction="#suprimer" text="suprimer" />
+            <Button fx:id="desactivebtn" layoutX="135.0" layoutY="17.0" mnemonicParsing="false" onAction="#desactiver" text="desactiver" />
+        </buttons>
+      </ButtonBar>
+      <TableView fx:id="usertd" layoutX="260.0" layoutY="85.0" onMouseClicked="#getData" prefHeight="307.0" prefWidth="379.0">
+        <columns>
+          <TableColumn fx:id="idcCol" prefWidth="29.33331298828125" text="id" />
+          <TableColumn fx:id="nomCol" prefWidth="71.3333740234375" text="nom" />
+            <TableColumn fx:id="prenomCol" prefWidth="60.66668701171875" text="prenom" />
+            <TableColumn fx:id="activedCol" prefWidth="49.3333740234375" text="actived" />
+            <TableColumn fx:id="roleCol" prefWidth="86.66659545898438" text="Role" />
+            <TableColumn fx:id="logincol" prefWidth="80.00006103515625" text="login" />
+        </columns>
+      </TableView>
+      <CheckBox fx:id="activedtfd" layoutX="22.0" layoutY="376.0" mnemonicParsing="false" onAction="#check" text="actived" />
+   </children>
+</AnchorPane>
